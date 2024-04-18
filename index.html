@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thegrocerystore.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--loginpage code-->
+    <div class="login_page" id="login_page">
+        <div class="login_cont" id="login_cont">
+            <div class="login_cont_1">
+                <span>THE GROCERY STORE</span>
+            </div>
+            <div class="login_cont_2">
+                <span class="login_status" id="login_status"></span>
+                <div class="login_phonenumber_cont">
+                    <span>Phonenumber</span>
+                    <input type="text" id="login_phonenumber">
+                </div>
+                <div class="login_password_div">
+                    <span>Password</span>
+                    <input type="password" id="login_password">
+                </div>
+                <button onclick="login()">Login</button>
+            </div>
+            <div class="login_cont_3">
+                <span>Don't have an account? <a onclick="signup_open()">Signup</a></span>
+            </div>
+        </div>
+        <div class="signin_cont" id="signin_cont">
+            <div class="signin_cont_1">
+                <span>THE GROCERY STORE</span>
+            </div>
+            <div class="signin_cont_2">
+                <span class="signin_status" id="signin_status"></span>
+                <div class="signin_name_cont">
+                    <span>Name</span>
+                    <input type="text" id="signin_name">
+                </div>
+                <div class="signin_phonenumber_cont">
+                    <span>Phonenumber</span>
+                    <input type="text" id="signin_phonenumber">
+                </div>
+                <div class="signin_password_cont">
+                    <span>Create password</span>
+                    <input type="password" id="signin_password">
+                </div>
+                <button onclick="signin()">Signup</button>
+            </div>
+            <div class="signin_cont_3">
+                <span>Already have an account? <a onclick="login_open()">Login</a></span>
+            </div>
+        </div>
+    </div>
+    <!--online ordering page code-->
+    <div class="onlineorderingpage" id="onlineorderingpage">
+        <div class="oo_head">
+            <div class="oo_head_header">
+                <div class="oo_head_header_links">
+                    <a href="#onlineorderingpage">Home</a>
+                    <a href="#oo_body">Order</a>
+                    <a><p onclick="account()">Account</p></a>
+                </div>
+                <div class="oo_head_header_brandname">
+                    <span>THE GROCERY STORE</span>
+                </div>
+            </div>
+            <div class="oo_head_header_body_cont1">
+                <span class="oo_head_header_body_cont1_1"><p>STORE TIMINGS   :   </p></span>
+                <span class="oo_head_header_body_cont1_2">9:00AM To 10:00PM</span>
+            </div>
+            <div class="oo_head_header_body_cont2">
+                <span class="oo_head_header_body_cont2_1"><p>THE GROCERY STORE</p></span>
+                <span class="oo_head_header_body_cont2_2"><p>WHERE YOU CAN BUY GROCERIES AND STUFF</p></span>
+            </div>
+            <div class="oo_head_header_body_cont3">
+                <a href="#oo_body">Order Now</a>
+            </div>
+        </div>
+        <div class="oo_body" id="oo_body">
+            <div class="oo_body_header">
+                <span>PRODUCT CATEGORIES</span>
+            </div>
+            <div class="oo_body_products_type_list">
+                <div class="product_type" onclick="fruits()">
+                    <div class="product_type_img"><img src="images/fruits type.jpeg"></div>
+                    <div class="product_type_name"><p>Fresh Fruits</p></div>
+                </div>
+                <div class="product_type" onclick="vegetables()">
+                    <div class="product_type_img"><img src="images/vegetables type.jpeg"></div>
+                    <div class="product_type_name"><p>Fresh Vegetables</p></div>
+                </div>
+                <div class="product_type" onclick="grocery()">
+                    <div class="product_type_img"><img style="opacity: 0.7;" src="images/groceriestype.jpeg"></div>
+                    <div class="product_type_name">Grocery Items</div>
+                </div>
+                <div class="product_type" onclick="household()">
+                    <div class="product_type_img"><img style="opacity: 0.7;" src="images/house hold type.jpeg"></div>
+                    <div class="product_type_name">House Hold Items</div>
+                </div>
+                <div class="product_type" onclick="dairy()">
+                    <div class="product_type_img"><img style="opacity: 0.7;" src="images/milktype.jpeg"></div>
+                    <div class="product_type_name">Dairy Products</div>
+                </div>
+                <div class="product_type" onclick="personalcare()">
+                    <div class="product_type_img"><img src="images/bodycare type.jpeg"></div>
+                    <div class="product_type_name">Personal Care</div>
+                </div>
+                <div class="product_type" onclick="snacks()">
+                    <div class="product_type_img"><img style="opacity: 0.7;" src="images/snacks type.jpeg"></div>
+                    <div class="product_type_name">Snacks</div>
+                </div>
+                <div class="product_type" onclick="cooldrinks()">
+                    <div class="product_type_img"><img src="images/cooldrinks type.jpeg"></div>
+                    <div class="product_type_name">Cool Drinks</div>
+                </div>
+            </div>
+        </div>
+        <!--product categories code-->
+        <!--fresh fruits categories-->
+        <div class="productcategoryitems" id="fruitstypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="fruitsback()">Back</p>
+                <span>Fresh Fruits</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/fruits/apple.jpg"></div>
+                        <div class="categorytypeproduct_name">Apple</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>25/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10001_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10001_addqnty">
+                            <button id="10001_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10001_product_quan_display" readonly>
+                            <button id="10001_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/fruits/bananas.jpg"></div>
+                        <div class="categorytypeproduct_name">Banana</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>10/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10002_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10002_addqnty">
+                            <button id="10002_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10002_product_quan_display" readonly>
+                            <button id="10002_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/fruits/grapes.jpg"></div>
+                        <div class="categorytypeproduct_name">Grapes</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>52/-(1Kg)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10003_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10003_addqnty">
+                            <button id="10003_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10003_product_quan_display" readonly>
+                            <button id="10003_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/fruits/strawberries.jpg"></div>
+                        <div class="categorytypeproduct_name">Strawberries</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>100/-(7Pcs)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10004_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10004_addqnty">
+                            <button id="10004_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10004_product_quan_display" readonly>
+                            <button id="10004_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/fruits/watermelon.jpg"></div>
+                        <div class="categorytypeproduct_name">Watermelon</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>27/-(Per Kg)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10005_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10005_addqnty">
+                            <button id="10005_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10005_product_quan_display" readonly>
+                            <button id="10005_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--fresh vegetables categories-->
+        <div class="productcategoryitems" id="vegetablestypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="vegetablesback()">Back</p>
+                <span>Fresh Vegetables</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/vegetables/tomatoes.jpg"></div>
+                        <div class="categorytypeproduct_name">Tomato</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>24/-(Per Kg)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10006_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10006_addqnty">
+                            <button id="10006_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10006_product_quan_display" readonly>
+                            <button id="10006_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/vegetables/chilli.jpg"></div>
+                        <div class="categorytypeproduct_name">Green Chilli</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>10/-(250g)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10007_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10007_addqnty">
+                            <button id="10007_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10007_product_quan_display" readonly>
+                            <button id="10007_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/vegetables/brinjal.jpg"></div>
+                        <div class="categorytypeproduct_name">Brinjal</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>16/-(250g)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10008_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10008_addqnty">
+                            <button id="10008_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10008_product_quan_display" readonly>
+                            <button id="10008_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/vegetables/potato.jpg"></div>
+                        <div class="categorytypeproduct_name">Potato</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>21/-(1Kg)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10009_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10009_addqnty">
+                            <button id="10009_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10009_product_quan_display" readonly>
+                            <button id="10009_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/vegetables/bittergourd.jpg"></div>
+                        <div class="categorytypeproduct_name">Bittergourd</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>15/-(250g)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10010_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10010_addqnty">
+                            <button id="10010_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10010_product_quan_display" readonly>
+                            <button id="10010_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--grocery items categories-->
+        <div class="productcategoryitems" id="grocerytypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="groceryback()">Back</p>
+                <span>Grocery Items</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                    <div class="categorytypeproduct_cont">
+                        <div class="categorytypeproduct_cont_head">
+                            <div class="categorytypeproduct_img"><img src="images/groceries/blackgram.jpg"></div>
+                            <div class="categorytypeproduct_name">Black Gram</div>
+                        </div>
+                        <div class="categorytypeproduct_cont_body">
+                            <div class="categorytypeproduct_price"><span><p>Price : </p>62/-(500g)</span></div>
+                            <div class="categorytypeproductaddbtn">
+                                <button id="10011_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                            </div>
+                            <div class="categorytypeproduct_quantity" id="10011_addqnty">
+                                <button id="10011_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                                <input type="text" id="10011_product_quan_display" readonly>
+                                <button id="10011_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categorytypeproduct_cont">
+                        <div class="categorytypeproduct_cont_head">
+                            <div class="categorytypeproduct_img"><img src="images/groceries/dal.jpg"></div>
+                            <div class="categorytypeproduct_name">Dal</div>
+                        </div>
+                        <div class="categorytypeproduct_cont_body">
+                            <div class="categorytypeproduct_price"><span><p>Price : </p>74/-(1Kg)</span></div>
+                            <div class="categorytypeproductaddbtn">
+                                <button id="10012_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                            </div>
+                            <div class="categorytypeproduct_quantity" id="10012_addqnty">
+                                <button id="10012_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                                <input type="text" id="10012_product_quan_display" readonly>
+                                <button id="10012_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categorytypeproduct_cont">
+                        <div class="categorytypeproduct_cont_head">
+                            <div class="categorytypeproduct_img"><img src="images/groceries/teapowder.jpg"></div>
+                            <div class="categorytypeproduct_name">Coffee Powder</div>
+                        </div>
+                        <div class="categorytypeproduct_cont_body">
+                            <div class="categorytypeproduct_price"><span><p>Price : </p>53/-(500g)</span></div>
+                            <div class="categorytypeproductaddbtn">
+                                <button id="10013_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                            </div>
+                            <div class="categorytypeproduct_quantity" id="10013_addqnty">
+                                <button id="10013_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                                <input type="text" id="10013_product_quan_display" readonly>
+                                <button id="10013_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categorytypeproduct_cont">
+                        <div class="categorytypeproduct_cont_head">
+                            <div class="categorytypeproduct_img"><img src="images/groceries/wheatflour.jpg"></div>
+                            <div class="categorytypeproduct_name">Wheat Flour</div>
+                        </div>
+                        <div class="categorytypeproduct_cont_body">
+                            <div class="categorytypeproduct_price"><span><p>Price : </p>81/-(1Kg)</span></div>
+                            <div class="categorytypeproductaddbtn">
+                                <button id="10014_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                            </div>
+                            <div class="categorytypeproduct_quantity" id="10014_addqnty">
+                                <button id="10014_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                                <input type="text" id="10014_product_quan_display" readonly>
+                                <button id="10014_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categorytypeproduct_cont">
+                        <div class="categorytypeproduct_cont_head">
+                            <div class="categorytypeproduct_img"><img src="images/groceries/turmeric.jpg"></div>
+                            <div class="categorytypeproduct_name">Turmeric Powder</div>
+                        </div>
+                        <div class="categorytypeproduct_cont_body">
+                            <div class="categorytypeproduct_price"><span><p>Price : </p>20/-(250g)</span></div>
+                            <div class="categorytypeproductaddbtn">
+                                <button id="10015_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                            </div>
+                            <div class="categorytypeproduct_quantity" id="10015_addqnty">
+                                <button id="10015_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                                <input type="text" id="10015_product_quan_display" readonly>
+                                <button id="10015_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!--household items categories-->
+        <div class="productcategoryitems" id="householdtypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="householdback()">Back</p>
+                <span>Household Items</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/house hold/detergent.jpg"></div>
+                        <div class="categorytypeproduct_name">Detergent</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>150/-(1Kg)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10016_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10016_addqnty">
+                            <button id="10016_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10016_product_quan_display" readonly>
+                            <button id="10016_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/house hold/toothpaste.jpg"></div>
+                        <div class="categorytypeproduct_name">Toothpaste</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>22/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10017_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10017_addqnty">
+                            <button id="10017_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10017_product_quan_display" readonly>
+                            <button id="10017_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/house hold/dishwasher.jpg"></div>
+                        <div class="categorytypeproduct_name">Dishwasher</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>92/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10018_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10018_addqnty">
+                            <button id="10018_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10018_product_quan_display" readonly>
+                            <button id="10018_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/house hold/toothbrush.png"></div>
+                        <div class="categorytypeproduct_name">Tooth Brush</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>15/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10019_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10019_addqnty">
+                            <button id="10019_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10019_product_quan_display" readonly>
+                            <button id="10019_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/house hold/floorcleaner.jpeg"></div>
+                        <div class="categorytypeproduct_name">Floor Cleaner</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>70/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10020_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10020_addqnty">
+                            <button id="10020_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10020_product_quan_display" readonly>
+                            <button id="10020_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--dairy items categories-->
+        <div class="productcategoryitems" id="dairytypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="dairyback()">Back</p>
+                <span>Dairy Products</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/dairy products/tirumala milk.jpg"></div>
+                        <div class="categorytypeproduct_name">Milk Packet</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>27/-(Packet)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10021_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10021_addqnty">
+                            <button id="10021_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10021_product_quan_display" readonly>
+                            <button id="10021_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/dairy products/hatsun curd.jpg"></div>
+                        <div class="categorytypeproduct_name">Curd Box</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>42/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10022_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10022_addqnty">
+                            <button id="10022_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10022_product_quan_display" readonly>
+                            <button id="10022_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/dairy products/cheese.jpg"></div>
+                        <div class="categorytypeproduct_name">Cheese</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>20/-(100g)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10023_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10023_addqnty">
+                            <button id="10023_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10023_product_quan_display" readonly>
+                            <button id="10023_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/dairy products/butter.jpg"></div>
+                        <div class="categorytypeproduct_name">Butter</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>15/-(50g)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10024_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10024_addqnty">
+                            <button id="10024_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10024_product_quan_display" readonly>
+                            <button id="10024_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/dairy products/nestle  milk powder.jpg"></div>
+                        <div class="categorytypeproduct_name">Milk Powder</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>50/-(100g)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10025_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10025_addqnty">
+                            <button id="10025_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10025_product_quan_display" readonly>
+                            <button id="10025_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--personalcare items categories-->
+        <div class="productcategoryitems" id="personalcaretypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="personalcareback()">Back</p>
+                <span>Personal care</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/personal care/fair&lovely.jpg"></div>
+                        <div class="categorytypeproduct_name">Facecream</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>80/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10026_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10026_addqnty">
+                            <button id="10026_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10026_product_quan_display" readonly>
+                            <button id="10026_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/personal care/eyeliner dazzler.jpg"></div>
+                        <div class="categorytypeproduct_name">Eyeliner</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>242/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10027_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10027_addqnty">
+                            <button id="10027_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10027_product_quan_display" readonly>
+                            <button id="10027_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/personal care/vaseline.jpg"></div>
+                        <div class="categorytypeproduct_name">Moisturizer</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>220/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10028_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10028_addqnty">
+                            <button id="10028_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10028_product_quan_display" readonly>
+                            <button id="10028_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/personal care/wildstonr perfume.jpg"></div>
+                        <div class="categorytypeproduct_name">Perfume</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>456/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10029_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10029_addqnty">
+                            <button id="10029_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10029_product_quan_display" readonly>
+                            <button id="10029_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/personal care/lipstick dazller eterna.jpg"></div>
+                        <div class="categorytypeproduct_name">Lip Stick</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>150/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10030_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10030_addqnty">
+                            <button id="10030_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10030_product_quan_display" readonly>
+                            <button id="10030_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--snacks items categories-->
+        <div class="productcategoryitems" id="snackstypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="snacksback()">Back</p>
+                <span>Snacks</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/snacks/chekki.jpg"></div>
+                        <div class="categorytypeproduct_name">Chekki</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>10/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10031_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10031_addqnty">
+                            <button id="10031_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10031_product_quan_display" readonly>
+                            <button id="10031_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/snacks/lays.jpg"></div>
+                        <div class="categorytypeproduct_name">Potato Chips</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>20/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10032_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10032_addqnty">
+                            <button id="10032_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10032_product_quan_display" readonly>
+                            <button id="10032_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/snacks/lollipop.jpg"></div>
+                        <div class="categorytypeproduct_name">Lollipop</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>5/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10033_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10033_addqnty">
+                            <button id="10033_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10033_product_quan_display" readonly>
+                            <button id="10033_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/snacks/dairy  milk.jpg"></div>
+                        <div class="categorytypeproduct_name">Chocolate</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>20/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10034_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10034_addqnty">
+                            <button id="10034_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10034_product_quan_display" readonly>
+                            <button id="10034_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/snacks/oreo biscuit.jpg"></div>
+                        <div class="categorytypeproduct_name">Biscuit Packet</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>15/-(Per Unit)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10035_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10035_addqnty">
+                            <button id="10035_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10035_product_quan_display" readonly>
+                            <button id="10035_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--cooldrinks items categories-->
+        <div class="productcategoryitems" id="cooldrinkstypelist">
+            <div class="categorytypeproductlist_head">
+                <p onclick="cooldrinksback()">Back</p>
+                <span>Cooldrinks</span>
+            </div>
+            <div class="categorytypeproductlist_body">
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/cold drink/fanta.jpg"></div>
+                        <div class="categorytypeproduct_name">Fanta</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>40/-(300ml)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10036_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10036_addqnty">
+                            <button id="10036_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10036_product_quan_display" readonly>
+                            <button id="10036_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/cold drink/mazza.jpg"></div>
+                        <div class="categorytypeproduct_name">Mazza</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>52/-(1L)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10037_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10037_addqnty">
+                            <button id="10037_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10037_product_quan_display" readonly>
+                            <button id="10037_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/cold drink/thums up.jpg"></div>
+                        <div class="categorytypeproduct_name">Thumsup</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>50/-(600ml)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10038_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10038_addqnty">
+                            <button id="10038_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10038_product_quan_display" readonly>
+                            <button id="10038_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/cold drink/sprite.jpg"></div>
+                        <div class="categorytypeproduct_name">Sprite</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>55/-(700ml)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10039_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10039_addqnty">
+                            <button id="10039_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10039_product_quan_display" readonly>
+                            <button id="10039_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorytypeproduct_cont">
+                    <div class="categorytypeproduct_cont_head">
+                        <div class="categorytypeproduct_img"><img src="images/cold drink/pulpy orange.jpg"></div>
+                        <div class="categorytypeproduct_name">Pulpy Orange</div>
+                    </div>
+                    <div class="categorytypeproduct_cont_body">
+                        <div class="categorytypeproduct_price"><span><p>Price : </p>55/-(1.1L)</span></div>
+                        <div class="categorytypeproductaddbtn">
+                            <button id="10040_addbtn" onclick="oo_product_add_btn(this)">Add</button>
+                        </div>
+                        <div class="categorytypeproduct_quantity" id="10040_addqnty">
+                            <button id="10040_quanminus_btn" onclick="quan_minus_btn(this)">-</button>
+                            <input type="text" id="10040_product_quan_display" readonly>
+                            <button id="10040_quanplus_btn" onclick="quan_plus_btn(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="oo_footer"></div>-->
+        <!--cartoptions-->
+        <div class="viewcart_button" id="viewcart_button" onclick="cart_open()"></div>
+        <!--cart_container-->
+        <div class="cart_div" id="cart_div">
+            <div class="cart_div_header">
+                <div class="close_cart_btn" onclick="cart_close()"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                    <g fill="#583101" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9.15625,6.3125l-2.84375,2.84375l15.84375,15.84375l-15.9375,15.96875l2.8125,2.8125l15.96875,-15.9375l15.9375,15.9375l2.84375,-2.84375l-15.9375,-15.9375l15.84375,-15.84375l-2.84375,-2.84375l-15.84375,15.84375z"></path></g></g>
+                    </svg></div>
+                <div class="cart_market_logo"><span>THE GROCERY STORE</span></div>
+            </div>
+            <div class="cart_div_body_cont1">Shopping Cart</div>
+            <div class="cart_div_body_cont2">
+                <div class="cart_products">
+                    <div class="cart_products_header">
+                        <span id="cart_product_card_name"><p>Name</p></span>
+                        <span id="cart_product_card_qnty"><p>Qnty</p></span>
+                        <span id="cart_product_card_Price"><p>Price</p></span>
+                    </div>
+                    <div class="cart_products_body" id="cart_products_body"></div>
+                </div>
+            </div>
+            <div class="cart_div_body_cont3">
+                <div class="cart_div_body_cont3_price">
+                    <span>Total Price : </span>
+                    <span id="oo_total_price"></span>
+                </div>
+                <div class="cart_div_body_cont3_buy">
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <!--account settings-->
+        <div class="account_div" id="account_div">
+            <div class="accountdiv_header">
+                <div class="account_username_div"><span id="account_username"></span></div>
+                <div class="accountdiv_close_btn" onclick="acc_close()"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                    <g fill="#583101" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9.15625,6.3125l-2.84375,2.84375l15.84375,15.84375l-15.9375,15.96875l2.8125,2.8125l15.96875,-15.9375l15.9375,15.9375l2.84375,-2.84375l-15.9375,-15.9375l15.84375,-15.84375l-2.84375,-2.84375l-15.84375,15.84375z"></path></g></g>
+                    </svg></div>
+            </div>
+            <div class="accountdiv_body">
+                <div class="account_info">
+                    <div class="account_username">
+                        <span>Username : </span>
+                        <p id="account_username">fdgfgd</p>
+                    </div>
+                    <div class="account_address">
+                        <span>Address : </span>
+                        <p id="account_address">dfgdfg</p>
+                    </div>
+                    <div class="account_addresschange_btn">
+                        <button>Change Address</button>
+                    </div>
+                    <div class="account_newaddress" id="account_newaddress">
+                        <span>New Address : </span>
+                        <textarea height="50" width="40"></textarea>
+                    </div>
+                </div>
+                <div class="order_info"></div>
+            </div>
+            <div class="accountdiv_footer"></div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="thegrocerystore.js"></script>
+</body>
+</html>
